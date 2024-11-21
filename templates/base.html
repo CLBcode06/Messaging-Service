@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Base{% endblock %}</title>
+        <link rel="stylesheet" href="/static/Stylesheet.css">
+        <script src="/static/Javascript.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    </head>
+
+    <!-- TODO: Setup the Header; this will be used throughout all HTML files -->
+    <header>
+        <!-- Buttons which will do a Series of Actions -->
+        <div style="margin: 2%; width: 170px; white-space: nowrap;" class="buttonContainer"> <!-- TBD: Wherever a Text or Image Logo should be used -->
+            <p class="logoText">Citrus</p>
+        </div>
+
+        <!-- Unordered List which contains buttons which will be used to redirect to other Webpages -->
+         <!-- TODO: Add link redirects to other pages -->
+        <ul class="navList">
+            <!-- Will open the About Us Page -->
+            <li>
+                <button class="headerButton">About Us</button>
+            </li>
+
+            <!-- Will open the Frequently Asked Questions Page -->
+            <li>
+                <button class="headerButton">FAQ</button>
+            </li>
+
+            <!-- Will open the Contact Us Page -->
+            <li>
+                <button class="headerButton">Contact Us</button>
+            </li>
+        
+            <!-- Will open the Support Us Page -->
+            <li>
+                <button class="headerButton">Support Us</button>
+            </li>
+
+            <!-- Will open the Sign-Up Page -->
+            <li>    
+                <button class="headerButton" onclick="navigateToPage('/sign-up');">Sign-Up</button>
+            </li>
+
+            <!-- Will open the Login Page -->
+            <li>
+                <button class="headerButton">Login</button>
+            </li>
+        </ul>
+
+        <!-- Hamburger Button -->
+        <button id="burgerButton" class="hamburgerContainer">
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+            <div class="burgerLine"></div>
+        </button>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <nav id="menu">
+        <ul class="menuList">  
+            <!-- Will open the About Us page -->  
+            <li>
+                <button class="menuButton">About Us</button>
+            </li>
+
+            <!-- Will open Frequently Asked Questions -->
+            <li>
+               <button class="menuButton">FAQ</button>
+            </li>
+            
+            <!-- Will open the Contact Us Page -->
+            <li>
+                <button class="menuButton">Contact Us</button>
+            </li>
+
+            <!-- Will open the Support Us Page -->
+            <li>
+                <button class="menuButton">Support Us</button>
+            </li>
+
+            <!-- Will open the Login Page -->
+            <li>
+                <button class="menuButton">Login</button>
+            </li>
+         
+            <!-- Will open the Sign-Up Page -->
+            <li>
+                <button class="menuButton">Sign-Up</button>
+            </li>
+        </ul>
+    </nav>
+
+    <footer>
+        <button class="footerButton">⌄</button>
+    </footer>
+
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
